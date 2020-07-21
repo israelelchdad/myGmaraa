@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="מה ברצונך ללמוד?" />
+
+        <TextView
+            android:id="@+id/study_option_daf_hyomy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="דף היומי" />
+
+        <TextView
+            android:id="@+id/study_option_talmud_bavly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="תלמוד בבלי" />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ברצונך לנהל גם חזרה על הלימוד?" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/Profile_numberOfReps_RG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_No_thanks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="לא תודה" />
+
+            <RadioButton
+                android:id="@+id/radio_Once"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="פעם אחת" />
+
+            <RadioButton
+                android:id="@+id/radio_Twice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="פעמיים" />
+
+            <RadioButton
+                android:id="@+id/radio_3_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="שלש פעמים" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Profile_create_Learning_BU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="צור לימוד יומי" />
+
+</LinearLayout>
